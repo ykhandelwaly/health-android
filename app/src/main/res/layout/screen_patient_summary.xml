@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/rootLayout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".summary.PatientSummaryScreen">
+
+  <RelativeLayout
+    android:id="@+id/patientsummary_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorToolbarPrimary"
+    android:elevation="@dimen/elevation_toolbar"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="UnusedAttribute">
+
+    <ImageButton
+      android:id="@+id/backButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:background="?selectableItemBackgroundBorderless"
+      android:contentDescription="@string/patientsummary_contentdescription_up_button"
+      android:padding="@dimen/spacing_12"
+      app:srcCompat="@drawable/ic_arrow_back_24dp"
+      app:tint="?attr/colorOnToolbarPrimary" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/editPatientButton"
+      style="@style/Widget.Simple.Button.Toolbar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_marginStart="@dimen/spacing_8"
+      android:layout_marginTop="@dimen/spacing_16"
+      android:layout_marginEnd="@dimen/spacing_8"
+      android:text="@string/patientsummary_edit"
+      android:visibility="invisible"
+      tools:ignore="RelativeOverlap"
+      tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/contactTextView"
+      style="@style/Widget.Simple.Button.Toolbar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="@dimen/spacing_16"
+      android:layout_toStartOf="@id/editPatientButton"
+      android:visibility="invisible"
+      app:icon="@drawable/ic_summary_call_icon"
+      app:iconTint="@null"
+      tools:ignore="RelativeOverlap"
+      tools:text="1111111111"
+      tools:visibility="visible" />
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/backButton"
+      android:paddingStart="@dimen/spacing_16"
+      android:paddingEnd="@dimen/spacing_16"
+      android:paddingBottom="@dimen/spacing_16">
+
+      <TextView
+        android:id="@+id/fullNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:maxLines="1"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="?attr/colorOnToolbarPrimary"
+        tools:text="Anish Acharya, M, 43" />
+
+      <TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fullNameTextView"
+        android:layout_alignStart="@id/fullNameTextView"
+        android:layout_marginTop="@dimen/spacing_4"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="@color/color_on_toolbar_primary_72"
+        tools:text="House No. 14, Street No. 10/11, Guru Gobind Singh Nagar, Bathinda, Punjab" />
+
+      <LinearLayout
+        android:id="@+id/identifiersContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addressTextView"
+        android:layout_alignStart="@id/addressTextView"
+        android:layout_marginTop="@dimen/spacing_4"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/bpPassportTextView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/spacing_8"
+          android:textAppearance="?attr/textAppearanceBody2"
+          android:textColor="@color/color_on_toolbar_primary_72"
+          android:visibility="gone"
+          tools:text="BP Passport: 512 9856"
+          tools:visibility="visible" />
+
+        <TextView
+          android:id="@+id/alternateIdTextView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/spacing_4"
+          android:textAppearance="?attr/textAppearanceBody2"
+          android:textColor="@color/color_on_toolbar_primary_72"
+          tools:text="\u2022 ID: 123456789012" />
+
+      </LinearLayout>
+
+    </RelativeLayout>
+
+  </RelativeLayout>
+
+  <com.google.android.material.progressindicator.CircularProgressIndicator
+    android:id="@+id/summaryLoadingProgressBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:indeterminate="true"
+    android:visibility="visible"
+    app:layout_constraintBottom_toTopOf="@id/buttonFrameBarrier"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/patientsummary_header"
+    tools:visibility="invisible" />
+
+  <androidx.core.widget.NestedScrollView
+    android:id="@+id/summaryViewsContainer"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_below="@+id/patientsummary_header"
+    android:visibility="invisible"
+    app:layout_constraintBottom_toTopOf="@id/buttonFrameBarrier"
+    app:layout_constraintTop_toBottomOf="@id/patientsummary_header"
+    tools:visibility="visible">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:clipChildren="false"
+      android:clipToPadding="false"
+      android:orientation="vertical">
+
+      <include
+        android:id="@+id/clinicalDecisionSupportBpHighAlert"
+        layout="@layout/view_clinical_decision_support_bp_high" />
+
+      <org.simple.clinic.widgets.PatientStatusView
+        android:id="@+id/patientDiedStatusView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginEnd="@dimen/spacing_8"
+        android:visibility="gone"
+        app:cardBackgroundColor="?attr/colorError"
+        app:statusIcon="@drawable/ic_patient_dead_32dp"
+        app:statusIconTint="?attr/colorOnError"
+        app:statusText="@string/patient_status_died"
+        app:statusTextColor="?attr/colorOnError"
+        tools:visibility="visible" />
+
+      <org.simple.clinic.summary.prescribeddrugs.DrugSummaryView
+        android:id="@+id/drugSummaryView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginEnd="@dimen/spacing_8" />
+
+      <org.simple.clinic.summary.bloodpressures.view.BloodPressureSummaryView
+        android:id="@+id/bloodPressureSummaryView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginEnd="@dimen/spacing_8" />
+
+      <org.simple.clinic.summary.bloodsugar.view.BloodSugarSummaryView
+        android:id="@+id/bloodSugarSummaryView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginEnd="@dimen/spacing_8"
+        android:visibility="gone" />
+
+      <org.simple.clinic.summary.nextappointment.NextAppointmentCardView
+        android:id="@+id/nextAppointmentFacilityView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginEnd="@dimen/spacing_8"
+        android:visibility="visible" />
+
+      <org.simple.clinic.summary.assignedfacility.AssignedFacilityView
+        android:id="@+id/assignedFacilityView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginEnd="@dimen/spacing_8"
+        android:visibility="gone" />
+
+      <org.simple.clinic.summary.medicalhistory.MedicalHistorySummaryView
+        android:id="@+id/medicalHistorySummaryView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+      <TextView
+        android:id="@+id/labelRegistered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_24"
+        android:text="@string/patientsummary_registered_faciliy_title"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceSubtitle1Medium" />
+
+      <TextView
+        android:id="@+id/facilityNameAndDateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="@dimen/spacing_24"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColor="?attr/colorOnSurface"
+        tools:text="20-Sep-2019 at DH Bhatinda" />
+
+    </LinearLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+  <androidx.constraintlayout.widget.Barrier
+    android:id="@+id/buttonFrameBarrier"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:barrierDirection="top"
+    app:constraint_referenced_ids="doneButtonFrame, logTeleconsultButtonFrame" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/doneButtonFrame"
+    style="@style/Widget.Simple.Button.Frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/teleconsultButton"
+      style="@style/Widget.Simple.Button.Green1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/spacing_8"
+      android:layout_weight="1"
+      android:text="@string/patientsummary_teleconsult"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/doneButton"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_goneMarginEnd="@dimen/spacing_0" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/doneButton"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/spacing_8"
+      android:layout_weight="1"
+      android:text="@string/patientsummary_finish_saving_patient"
+      app:icon="@drawable/ic_done_24dp"
+      app:iconGravity="textStart"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/teleconsultButton"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_goneMarginStart="@dimen/spacing_0" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <FrameLayout
+    android:id="@+id/logTeleconsultButtonFrame"
+    style="@style/Widget.Simple.Button.Frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/ThemeOverlay.Simple.LogTeleconsultButtonFrame"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/logTeleconsultButton"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/patientsummary_log_teleconsult" />
+
+  </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

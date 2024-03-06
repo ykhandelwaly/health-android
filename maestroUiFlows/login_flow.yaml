@@ -1,0 +1,21 @@
+appId: org.simple.clinic.staging
+---
+- clearState
+- launchApp
+- tapOn: "Next"
+- tapOn: "Get started"
+- tapOn: "AGREE AND CONTINUE"
+- tapOn:
+    below:
+      id: "select_country_title"
+- tapOn:
+    below:
+      id: "select_state_title"
+- inputText: "6664266642"
+- tapOn: "Next"
+- assertVisible:
+    text: "Your security PIN"
+- inputText: "1712"
+- tapOn: "Enter code"
+- inputText: "000000"
+- tapOn: "Got it"
