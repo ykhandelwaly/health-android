@@ -1,10 +1,9 @@
 # Simple
 
-An Android app for recording blood pressure measurements.
 
 ## Pre-requisites
 
-
+The application currently requires JDK 17 to build. If you already have JDK 17 installed, skip this step.
 
 **Check if the right JDK is already available**
 
