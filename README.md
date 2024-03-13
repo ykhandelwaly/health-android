@@ -1,4 +1,4 @@
-# Simple
+# Simple 10
 
 An Android app for recording blood pressure measurements.
 
