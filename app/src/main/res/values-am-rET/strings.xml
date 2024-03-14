@@ -1,38 +1,38 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!-- Common -->
-  <string name="gender_femaale">ሴት</string>
-  <string name="gender_maale">ወንድ</string>
-  <string name="gender_traansgender">ትራንስጀንደር</string>
+  <string name="gender_female">ሴት</string>
+  <string name="gender_male">ወንድ</string>
+  <string name="gender_transgender">ትራንስጀንደር</string>
   <!--suppress UnusedResources -->
-  <string name="gender_maale_letter">ወ</string>
+  <string name="gender_male_letter">ወ</string>
   <!--suppress UnusedResources -->
-  <string name="gender_feamale_letter">ሴ</string>
+  <string name="gender_female_letter">ሴ</string>
   <!--suppress UnusedResources -->
-  <string name="gender_traans_letter">ት</string>
-  <string name="api_unaexpected_error">የሆነ ስህተት ተከስቷል። እባክዎ እንደገና ይሞክሩ</string>
-  <string name="api_nethwork_error">ምንም የበይነመረብ ግንኙነት የለም</string>
-  <string name="api_servehr_error">የሰርቨር ስህተት! እባክዎ ቆየት ብለው ይሞክሩ።</string>
+  <string name="gender_trans_letter">ት</string>
+  <string name="api_unexpected_error">የሆነ ስህተት ተከስቷል። እባክዎ እንደገና ይሞክሩ</string>
+  <string name="api_network_error">ምንም የበይነመረብ ግንኙነት የለም</string>
+  <string name="api_server_error">የሰርቨር ስህተት! እባክዎ ቆየት ብለው ይሞክሩ።</string>
 
   <!-- Country names -->
-  <string name="country_ihndia">ህንድ</string>
-  <string name="country_bahngladesh">ባንግላደሽ</string>
-  <string name="country_ethhiopia">ኢትዮጵያ</string>
-  <string name="country_srhi_lanka">ስሪ ላንካ</string>
-  <string name="country_dhemo">ማሳያ ሀገር</string>
+  <string name="country_india">ህንድ</string>
+  <string name="country_bangladesh">ባንግላደሽ</string>
+  <string name="country_ethiopia">ኢትዮጵያ</string>
+  <string name="country_sri_lanka">ስሪ ላንካ</string>
+  <string name="country_demo">ማሳያ ሀገር</string>
 
   <!-- Home -->
-  <string name="home_hehlp">እገዛ</string>
-  <string name="home_sethtings">ቅንብሮች</string>
+  <string name="home_help">እገዛ</string>
+  <string name="home_settings">ቅንብሮች</string>
 
   <!--Business id Identifier -->
-  <string name="identifiertype_bhp_passport">የቢፒ ፓስፖርት</string>
-  <string name="identifiertype_bhangladesh_national_id">ብሔራዊ መታወቂያ ቁጥር</string>
-  <string name="identifiertype_ethhiopia_medical_record_number">የህክምና መዝገብ ቁጥር</string>
-  <string name="identifiertype_unhknown">መታወቂያ</string>
-  <string name="identifiertype_ihndia_national_health_id">ብሔራዊ የጤና መታወቂያ</string>
-  <string name="identifiertype_srhi_lanka_national_id">ብሔራዊ መታወቂያ ቁጥር</string>
-  <string name="identifiertype_shri_lanka_personal_health_number">የግል ጤና ቁጥር</string>
+  <string name="identifiertype_bp_passport">የቢፒ ፓስፖርት</string>
+  <string name="identifiertype_bangladesh_national_id">ብሔራዊ መታወቂያ ቁጥር</string>
+  <string name="identifiertype_ethiopia_medical_record_number">የህክምና መዝገብ ቁጥር</string>
+  <string name="identifiertype_unknown">መታወቂያ</string>
+  <string name="identifiertype_india_national_health_id">ብሔራዊ የጤና መታወቂያ</string>
+  <string name="identifiertype_sri_lanka_national_id">ብሔራዊ መታወቂያ ቁጥር</string>
+  <string name="identifiertype_sri_lanka_personal_health_number">የግል ጤና ቁጥር</string>
 
   <!-- Patient search -->
   <string name="instantsearch_hint">ስም ፣ ስልክ ወይም መታወቂያ</string>
@@ -46,23 +46,23 @@
   <string name="patiententry_contentdescription_up_button">ወደ ፍለጋ ይመለሱ</string>
   <string name="patiententry_full_name">የታካሚ ስም</string>
   <string name="patiententry_phone_number">ስልክ ቁጥር</string>
-  <string name="patiententry_banghladesh_national_id">ብሔራዊ መታወቂያ ቁጥር</string>
-  <string name="patiententry_ethihpia_medical_record_number">የህክምና መዝገብ ቁጥር</string>
-  <string name="patiententry_sri_lhanka_personal_health_number">የግል ጤና ቁጥር</string>
-  <string name="patiententry_dateh_of_birth_unfocused">የትውልድ ቀን</string>
-  <string name="patiententry_date_hof_birth_focused">የ.ት.ቅ፡ ቀቀ/ወወ/ዐዐ</string>
-  <string name="patiententry_dateohfbirth_and_age_separator">ወይም</string>
+  <string name="patiententry_bangladesh_national_id">ብሔራዊ መታወቂያ ቁጥር</string>
+  <string name="patiententry_ethiopia_medical_record_number">የህክምና መዝገብ ቁጥር</string>
+  <string name="patiententry_sri_lanka_personal_health_number">የግል ጤና ቁጥር</string>
+  <string name="patiententry_date_of_birth_unfocused">የትውልድ ቀን</string>
+  <string name="patiententry_date_of_birth_focused">የ.ት.ቅ፡ ቀቀ/ወወ/ዐዐ</string>
+  <string name="patiententry_dateofbirth_and_age_separator">ወይም</string>
   <string name="patiententry_age">እድሜ</string>
-  <string name="patiententry_sthreet_address">የቤት አድራሻ</string>
-  <string name="patiententry_strheet_house_road_number">የቤት እና የመንገድ ቁጥር</string>
-  <string name="patiententry_vilhlage_colony_ward">መንደር/ጎጥ/ወረዳ</string>
-  <string name="patiententry_vilhlage_ward">መንደር/ወረዳ</string>
+  <string name="patiententry_street_address">የቤት አድራሻ</string>
+  <string name="patiententry_street_house_road_number">የቤት እና የመንገድ ቁጥር</string>
+  <string name="patiententry_village_colony_ward">መንደር/ጎጥ/ወረዳ</string>
+  <string name="patiententry_village_ward">መንደር/ወረዳ</string>
   <string name="patiententry_kebele">ቀበሌ</string>
   <string name="patiententry_zone">ህብረት</string>
-  <string name="patiententry_dishtrict">ቀበሌ</string>
-  <string name="patiententry_worheda">ዞን</string>
-  <string name="patiententry_upahzila">ኡፓዚላ</string>
-  <string name="patiententry_stahte">አከባቢ</string>
+  <string name="patiententry_district">ቀበሌ</string>
+  <string name="patiententry_woreda">ዞን</string>
+  <string name="patiententry_upazila">ኡፓዚላ</string>
+  <string name="patiententry_state">አከባቢ</string>
   <string name="patiententry_region">ክልል</string>
   <string name="patiententry_doornumber_streetname">የበር ቁጥር ፣ የጎዳና ስም</string>
   <string name="patiententry_division_area">ክፈል እና አከባቢ</string>
@@ -70,30 +70,30 @@
   <string name="patiententry_error_empty_fullname">የታካሚውን ሙሉ ስም ያስገቡ</string>
   <string name="patiententry_error_empty_gender">የታካሚውን ጾታ ይምረጡ</string>
   <string name="patiententry_error_empty_colony_or_village">ይፈለጋል</string>
-  <string name="patiententry_error_hempty_district">ይፈለጋል</string>
+  <string name="patiententry_error_empty_district">ይፈለጋል</string>
   <string name="patiententry_error_state_empty">ይፈለጋል</string>
   <string name="patiententry_error_both_dateofbirth_and_age_empty">የታካሚውን ዕድሜ ያስገቡ</string>
-  <string name="patiententry_error_hinvalid_dateofbirth">የታካሚውን የትውልድ ቀን በ ቀቀ/ወወ/ዓዓ ውስጥ ያስገቡ</string>
+  <string name="patiententry_error_invalid_dateofbirth">የታካሚውን የትውልድ ቀን በ ቀቀ/ወወ/ዓዓ ውስጥ ያስገቡ</string>
   <string name="patiententry_error_dateofbirth_is_in_future">የታካሚውን የትውልድ ቀን ያስተካክሉ</string>
-  <string name="patiententry_error_phhonenumber_blank">የስልክ ቁጥር ባዶ ልሆን አይችልም</string>
+  <string name="patiententry_error_phonenumber_blank">የስልክ ቁጥር ባዶ ልሆን አይችልም</string>
   <string name="patiententry_error_phonenumber_length_less">የስልክ ቁጥር ከ %1$s ዲጂቶች በታች መሆን አይችልም</string>
   <string name="patiententry_identifier_bp_passport">የደም ግፊት ፓስፖርት</string>
-  <string name="patiententry_conshhent_header">ስምምነት:\u0020</string>
+  <string name="patiententry_consent_header">ስምምነት:\u0020</string>
   <string name="patiententry_consent_first_para">ከዚህ በታች መታ በማድረግ እዚህ ያስገቡት ማንኛውም የታካሚ መረጃ በተገቢው በተረጋገጠ ስምምነት የተገኘ መሆኑን ያረጋግጣሉ። ይህ ማለት ታካሚው ወይም የታካሚው ሞግዚት የግል መረጃ ወደ መተግበሪያው ውስጥ እንደሚገቡ ያውቃሉ፣ ምን መረጃ እየተሰበሰበ እንዳለ ይገነዘባሉ፣ እንዲሁም በመተግበሪያው ውስጥ የሚገኘውን የስልክ ቁጥር በመጠቀም በኤስኤምኤስ፣ በ WhatsApp ወይም በሌሎች መንገዶች ሊገናኙ እንደሚችሉ ያውቃሉ።</string>
   <string name="patiententry_consent_second_para">እርስዎ የፈቀዱለት ማንኛውም ሰው ወይም እርስዎ የሚሰሩለት የጤና ባለሙያ ፤ እዚህ ያስገቡትን የታካሚ መረጃዎች ማግኘት ይችላል። መተግበሪያውን በመጠቀም ታካሚው ወይም የታካሚው ሞግዚት በዚህ መተግበሪያ አማካኝነት የተገኘውን መረጃ ማን መድረስ እንደሚችል መገንዘባቸውን እና ተሰማሚነታቸውን አረጋግጠዋል።</string>
-  <string name="patiententry_conshent_whatsapp_sms_reminders">የ WhatsApp / ኤስኤምኤስ አስታዋሾች</string>
-  <string name="patiententry_consenhht_sms_reminders">ኤስኤምኤስ አስታዋሾች</string>
-  <string name="patiententry_age_ehxceeds_max_limit_error">ዕድሜ ከ 120 ዓመት በላይ መሆን አይችልም</string>
-  <string name="patiententry_age_ehxceeds_min_limit_error">ዕድሜ ከ 0 ዓመት ጋር እኩል መሆን አይችልም</string>
+  <string name="patiententry_consent_whatsapp_sms_reminders">የ WhatsApp / ኤስኤምኤስ አስታዋሾች</string>
+  <string name="patiententry_consent_sms_reminders">ኤስኤምኤስ አስታዋሾች</string>
+  <string name="patiententry_age_exceeds_max_limit_error">ዕድሜ ከ 120 ዓመት በላይ መሆን አይችልም</string>
+  <string name="patiententry_age_exceeds_min_limit_error">ዕድሜ ከ 0 ዓመት ጋር እኩል መሆን አይችልም</string>
   <string name="patiententry_town_area">ከተማ / አከባቢ</string>
-  <string name="patiententry_provihnce">ግዛት</string>
+  <string name="patiententry_province">ግዛት</string>
 
-  <string name="patientedit_saveh_patient">አስቀምጥ</string>
-  <string name="patientedit_bp_pahssports_label">የደም ግፊት ፓስፖርቶች</string>
-  <string name="patientedit_confihrm_discard_title">ለውጦች ይወገዱ?</string>
-  <string name="patientedit_confhirm_discard_ok">ይወገዱ</string>
+  <string name="patientedit_save_patient">አስቀምጥ</string>
+  <string name="patientedit_bp_passports_label">የደም ግፊት ፓስፖርቶች</string>
+  <string name="patientedit_confirm_discard_title">ለውጦች ይወገዱ?</string>
+  <string name="patientedit_confirm_discard_ok">ይወገዱ</string>
   <string name="patientedit_confirm_discard_cancel">ይቅር</string>
-  <string name="patientedit_deleteh_patient">ያስወግዱ</string>
+  <string name="patientedit_delete_patient">ያስወግዱ</string>
   <string name="patientedit_add_button">ያክሉ</string>
 
   <!-- Home: Tabs -->
