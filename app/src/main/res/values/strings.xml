@@ -267,12 +267,12 @@
   <string name="pinentry_error_incorrect_pin_attempts_remaining" tools:ignore="PluralsCandidate">Incorrect PIN, %s attempts remaining</string>
   <string name="pinentry_error_incorrect_pin_attempts_limit_reached" tools:ignore="PluralsCandidate">You have made %s incorrect attempts</string>
   <string name="pinentry_pin_number_hint">Your security PIN</string>
-  <string name="pinentry_bruteforcelock_timer_label">Try again after</string>
+  <string name="pinentry_bruteforcelock_timer_label">Try again later</string>
   <string name="pinentry_bruteforcelock_timer" translatable="false">%1$s:%2$s</string> <!-- minutes:seconds -->
 
   <!-- Registration -->
   <string name="registrationphone_phone_number_label">Your phone number</string>
-  <string name="registrationphone_error_invalid_number">Check phone number. It looks like it is too short.</string>
+  <string name="registrationphone_error_invalid_number">Check phone number. It's incorrect</string>
   <string name="registrationphone_error_unexpected_error" translatable="false">@string/api_unexpected_error</string>
   <string name="registrationphone_error_check_internet_connection" translatable="false">@string/api_network_error</string>
   <string name="registration_loggedout_dialog_title">You have been logged out</string>
